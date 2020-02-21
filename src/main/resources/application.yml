@@ -1,3 +1,9 @@
+datasources:
+  default:
+    url: "jdbc:mariadb://localhost:3306/f1?user=root&password=root"
+    driverClassName: "org.mariadb.jdbc.Driver"
+    dialect: MYSQL
+
 micronaut:
   application:
     name: micronaut-graal
