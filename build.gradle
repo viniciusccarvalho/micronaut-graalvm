@@ -47,7 +47,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}"
 
     implementation "io.micronaut.data:micronaut-data-jdbc:$micronautDataVersion"
-    implementation "org.mariadb.jdbc:mariadb-java-client:2.5.2"
+    implementation "org.postgresql:postgresql:42.2.8"
+    //implementation "org.mariadb.jdbc:mariadb-java-client:2.5.2"
+    //implementation "mysql:mysql-connector-java:8.0.19"
+    implementation "com.google.cloud.sql:postgres-socket-factory:1.0.15"
     implementation "javax.annotation:javax.annotation-api"
 
     runtime "io.micronaut.configuration:micronaut-jdbc-tomcat"

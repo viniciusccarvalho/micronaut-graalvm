@@ -7,11 +7,10 @@ micronaut:
 ---
 datasources:
   default:
-    url: "jdbc:mariadb://localhost:3306/f1"
-    driverClassName: "org.mariadb.jdbc.Driver"
-    username: root
-    password: root
-    dialect: MYSQL
+    #url: "jdbc:postgresql:${DB_NAME}?cloudSqlInstance=${INSTANCE_CONNECTION_NAME}&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=${DB_USER}&password=${DB_PASSWORD}"
+    url: "${DB_URL}"
+    driverClassName: "org.postgresql.Driver"
+    dialect: POSTGRES
 ---
 endpoints:
   all:
