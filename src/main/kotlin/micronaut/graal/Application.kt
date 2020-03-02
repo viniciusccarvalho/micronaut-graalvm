@@ -1,10 +1,15 @@
 package micronaut.graal
 
-import com.google.cloud.sql.postgres.SocketFactory
 import io.micronaut.core.annotation.TypeHint
 import io.micronaut.runtime.Micronaut
+import org.mariadb.connection.SocketFactory
 
-@TypeHint(value = [org.postgresql.Driver::class, SocketFactory::class])
+@TypeHint(value = [
+    SocketFactory::class,
+    org.mariadb.jdbc.util.Options::class,
+    org.mariadb.jdbc.Driver::class ]
+,
+        accessType = [ TypeHint.AccessType.ALL_PUBLIC ])
 object Application {
 
     @JvmStatic

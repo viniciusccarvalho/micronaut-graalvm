@@ -9,6 +9,6 @@ import micronaut.graal.model.Driver
  * @author vinicius
  *
  */
-@JdbcRepository(dialect = Dialect.POSTGRES)
+@JdbcRepository(dialect = Dialect.MYSQL)
 interface DriverRepository : CrudRepository<Driver, Int> {
 }
